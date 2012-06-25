@@ -11,6 +11,11 @@
     For details on using these functions, please read
     the Python Style guide from the CS 116 website,
     www.student.cs.uwaterloo.ca/~cs116/styleGuide
+    
+    The majority of this file was written by staff of the University of
+    Waterloo.  All differences from the version distributed by the CS
+    departement were written by Joel Williamson. Anyone may freely
+    copy, modify and redistribute these changes.
 """
 
 import sys, os
