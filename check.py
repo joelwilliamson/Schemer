@@ -153,6 +153,8 @@ def run_test(label, result, expected, tolerance):
     elif not(tolerance) and result != expected:
         print "%s: FAILED; expected %s, saw %s\n" \
               % (label, expected, result)
+    else :
+        print "%s: The test passed" % (label)
     
     if file_list:
         new_files = []
