@@ -1,8 +1,7 @@
 #lang racket
 
 (provide check-expect
-         check-within
-         check-member-of)
+         check-within)
 
 ;; check-expect: Any Any -> None
 ;; (check-expect expression expected-value)
@@ -22,4 +21,20 @@
                  (display expr)
                  (display "  ---   Expected: ")
                  (display expected)
-                 #t)])]))
+                 #f)])]))
+
+(define-syntax check-within
+  (syntax-rules ()
+    [(check-within expr expected tolerance)
+     (cond [(<= (abs expr) tolerance)
+            (begin (display  "Test passed.\n") #t)]
+           [else (begin (display "Test failed: ")
+                 (display  (syntax->datum #'expr))
+                 (display " => ")
+                 (display expr)
+                 (display "  ---   Expected to be within ")
+                 (display tolerance)
+                 (display " of ")
+                 (display expected)
+                 #f)])]))
+(check-within (sqrt 2) 1.4 0.001)
