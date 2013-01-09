@@ -20,7 +20,8 @@
                  (display " => ")
                  (display expr)
                  (display "  ---   Expected: ")
-                 (display expected))])]))
+                 (display expected)
+                 (display #\newline))])]))
 
 ;; check-within: Real Real Real[>=0] -> None
 ;; (check-within expression expected-value tolerance)
@@ -41,4 +42,5 @@
                  (display "  ---   Expected to be within ")
                  (display tolerance)
                  (display " of ")
-                 (display expected))])]))
+                 (display expected)
+                 (display #\newline))])]))
