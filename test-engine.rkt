@@ -3,6 +3,9 @@
 (provide check-expect
          check-within)
 
+;; These tests don't seem to work with `defined` values when they have been pulled in with
+;; a require statement, but work fine if they are pasted into the test file. Not sure why yet.
+
 ;; check-expect: Any Any -> None
 ;; (check-expect expression expected-value)
 ;; Purpose: check-expect checks if expression evaluates to expected-value.
